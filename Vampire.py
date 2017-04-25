@@ -1,9 +1,9 @@
-class Goblin(object):
+class Vampire(object):
 	def __init__(self):
-		self.health = 6
-		self.power = 2
-		self.name = "Goblin"
-		self.xp_value = 5
+		self.health = 12
+		self.power = 5
+		self.name = "Vampire"
+		self.xp_value = 10
 	def take_damage(self,damage):
 		self.health -= damage
 	def is_alive(self):
