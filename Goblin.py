@@ -1,4 +1,6 @@
-class Goblin(object):
+# Import the Monster class
+from Monster import Monster
+class Goblin(Monster):
 	def __init__(self):
 		self.health = 6
 		self.power = 2

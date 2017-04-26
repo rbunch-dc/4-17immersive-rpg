@@ -1,20 +1,33 @@
 # Import the Hero class from Hero.py
 from Hero import Hero
 # Import the Goblin class from Goblin.py
-from Goblin import Goblin
+# from Goblin import Goblin
 from Vampire import Vampire
+from Monster import Goblin
+from Monster import Hobgoblin
+from random import randint
 
 # Ask the user for the hero's name
 print ("What is thy name, brave adventurer?")
 hero_name = raw_input("> ")
 the_hero = Hero(hero_name)
 # the_hero.cheer_hero()
+monsters_types = ["hobgoblin", "vampire"]
 monsters = []
-monsters.append(Goblin())
-monsters.append(Vampire())
 
-# print "How many monsters are you willing to fight?"
-# number_of_enemies = raw_input("> ")
+
+# monsters.append(gob)
+# monsters.append(Vampire())
+
+print "How many monsters are you willing to fight?"
+number_of_enemies = int(raw_input("> "))
+
+for i in range(0, number_of_enemies):
+	rand_num = randint(0,len(monsters_types)-1)
+	if(monsters_types[rand_num] == "hobgoblin"):
+		monsters.append(Hobgoblin())
+	elif(monsters_types[rand_num] == "vampire"):
+		monsters.append(Vampire())
 
 # for i in range(0,len(monsters)-1)
 # monsters[i]
